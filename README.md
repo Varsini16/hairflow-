@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Browserslist [![Cult Of Martians][cult-img]][cult]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="120" height="120" alt="Browserslist logo by Anton Popov"
+     src="https://browsersl.ist/logo.svg" align="right">
 
-## Available Scripts
+The config to share target browsers and Node.js versions between different
+front-end tools. It is used in:
 
-In the project directory, you can run:
+* [Autoprefixer]
+* [Babel]
+* [postcss-preset-env]
+* [eslint-plugin-compat]
+* [stylelint-no-unsupported-browser-features]
+* [postcss-normalize]
+* [obsolete-webpack-plugin]
 
-### `npm start`
+All tools will find target browsers automatically,
+when you add the following to `package.json`:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```json
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ]
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Or in `.browserslistrc` config:
 
-### `npm test`
+```yaml
+# Browsers that we support
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+defaults and fully supports es6-module
+maintained node versions
+```
 
-### `npm run build`
+Developers set their version lists using queries like `last 2 versions`
+to be free from updating versions manually.
+Browserslist will use [`caniuse-lite`] with [Can I Use] data for this queries.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can check how config works at our playground: [`browsersl.ist`](https://browsersl.ist/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://browsersl.ist/">
+  <img src="/img/screenshot.webp" alt="browsersl.ist website">
+</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
+<br>
+<div align="center">
+  <a href="https://evilmartians.com/?utm_source=browserslist"><img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54"></a>  <a href="https://cube.dev/?ref=eco-browserslist-github"><img src="https://user-images.githubusercontent.com/986756/154330861-d79ab8ec-aacb-4af8-9e17-1b28f1eccb01.svg" alt="Supported by Cube" width="227" height="46"></a>
+</div>
 
-### `npm run eject`
+[stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
+[obsolete-webpack-plugin]:                   https://github.com/ElemeFE/obsolete-webpack-plugin
+[eslint-plugin-compat]:                      https://github.com/amilajack/eslint-plugin-compat
+[Browserslist Example]:                      https://github.com/browserslist/browserslist-example
+[postcss-preset-env]:                        https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env
+[postcss-normalize]:                         https://github.com/csstools/postcss-normalize
+[`browsersl.ist`]:                           https://browsersl.ist/
+[`caniuse-lite`]:                            https://github.com/ben-eb/caniuse-lite
+[Autoprefixer]:                              https://github.com/postcss/autoprefixer
+[Can I Use]:                                 https://caniuse.com/
+[Babel]:                                     https://github.com/babel/babel/tree/master/packages/babel-preset-env
+[cult-img]: https://cultofmartians.com/assets/badges/badge.svg
+[cult]: https://cultofmartians.com/done.html
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Docs
+Read full docs **[here](https://github.com/browserslist/browserslist#readme)**.
